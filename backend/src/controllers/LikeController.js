@@ -16,7 +16,13 @@ module.exports = {
             // retorno um 400
             return res.status(400).json({ error: "Dev not exists" });
         }
-        
+
+        // conferir se um o alvo já não curtiu o cara agora
+        // includes confere se no array existe esse valor
+        if (targetDev.like.includes(loggedDev._id)) {
+            console.log("Deeeu match", loggedDev.name, "com",targetDev.name);
+        }
+
         // usando o usuario no mongo
         loggedDev.like.push(targetDev._id);
         // salvando no mongo
