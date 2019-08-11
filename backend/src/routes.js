@@ -7,6 +7,7 @@ const routes = express.Router();
 
 // rotas do meu app
 routes
+    .get("/devs", DevController.index)
     .post("/devs", DevController.store)
     .post("/devs/:devId/likes", LikeController.store)
     .post("/devs/:devId/deslikes", DeslikesController.store)
