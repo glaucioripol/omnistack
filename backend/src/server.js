@@ -5,6 +5,8 @@ const routes = require("./routes");
 const server = express();
 mongoose.connect("mongodb+srv://glaucioadmin:6161@0792@cluster0-vdz3h.mongodb.net/bdomnistack?retryWrites=true&w=majority",{
     useNewUrlParser: true
+}).catch(err => {
+    console.log(err)
 });
 
 

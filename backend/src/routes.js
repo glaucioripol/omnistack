@@ -1,17 +1,13 @@
 const express = require("express");
+const DevController = require("./controllers/DevController");
+const LikeController = require("./controllers/LikeController");
 
 const routes = express.Router();
 
+
 routes
-    .get("/", (req, res) => {
-        // query string
-        nome = req.query.nome;
-        res.json({ response: req.query, teste: nome });
-    })
-    .post("/devs", (req, res) => {
-        let data = req.body;
-        res.json(data);
-    })
+    .post("/devs", DevController.store)
+    .post("/devs/:devId/likes", LikeController.store)
 
 
 module.exports = routes;
