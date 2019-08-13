@@ -14,7 +14,7 @@
 
 .login-container form input {
     margin-top: 20px;
-    border: 10px solid #ddd;
+    border: 1px solid #ddd;
     border-radius: 4px;
     height: 48px;
     padding: 0 20px;
