@@ -5,10 +5,11 @@ import Main from './pages/Main';
 
 /* broser router é onde vao todas rotas e cada route uma rota*/
 export default function Routes(){
+    // exact para setar a principal
     return (
         <BrowserRouter>
-        <Route path="/" component={Login} />
-        <Route path="/main" component={Main} />
+        <Route path="/" exact component={Login} />
+        <Route path="/dev/:id" component={Main} />
         </BrowserRouter>
     )
 

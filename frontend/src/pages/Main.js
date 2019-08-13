@@ -1,10 +1,10 @@
 import React from "react";
 
-
-function Main() {
-
-    return(
-        <h1>Hello world</h1>
+// esse match pega todos os parametros jogados nesta rota
+function Main({ match}) {
+    // pegando o paramentro que foi para rota match.params. o nome dele
+    return (
+        <h1>Hello world: {match.params.id}</h1>
     )
 
 }
